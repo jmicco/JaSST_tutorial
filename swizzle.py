@@ -1,3 +1,7 @@
+# Copyright 2017 Google, Inc.
+# (Creative Commons Attribution 4.0 International Public License)
+# See LICENSE.txt for details
+
 import csv
 import sys
 

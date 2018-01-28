@@ -19,6 +19,8 @@
 # Only include results of PASSED, FAILED, FLAKY and SKIPPED.  In our system
 # other results indicate problems running the tests or tests that we never ran
 #
+# NOTE: This result should be saved as the "flaky_tests" table
+#
 
 WITH result_values AS (
   SELECT

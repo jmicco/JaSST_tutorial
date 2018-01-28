@@ -8,6 +8,7 @@
 # This is designed to be used as input for the query showing that
 # targets sharing histories are not likely to be flaky.
 #
+# NOTE: This result should be saved as the target_transitions table
 #
 
 WITH result_values AS (

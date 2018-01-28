@@ -1,9 +1,8 @@
+#standardSQL
+#
 # Copyright 2017 Google, Inc.
 # (Creative Commons Attribution 4.0 International Public License)
 # See LICENSE.txt for details
-
-#standardSQL
-#
 
 # Finds all tests that are probably flaky, having more than 2
 # transitions in a 1 month period.  NOTE: This may need to be tuned to

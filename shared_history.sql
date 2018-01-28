@@ -17,7 +17,7 @@ WITH target_transition_set AS (
   SELECT
     target_id,
     ARRAY_AGG(CAST(changelist AS STRING)) AS changelists
-  FROM `TestResultData.target_transitions`
+  FROM `TestResultData100K.target_transitions`
   GROUP BY target_id
   ORDER BY target_id
 )

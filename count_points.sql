@@ -6,6 +6,5 @@
 #
 # Counts the number of all result points in the result set.
 #
-#standardSQL
-SELECT COUNT(*)
+SELECT COUNT(*) as result_count
 FROM `TestResultData.results`;

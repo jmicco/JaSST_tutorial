@@ -1,0 +1,21 @@
+
+In order to participate in the hands-on potion of this class, you will
+need a laptop with internet access and a Google account.  A github
+account and/or a place to sync the github repository is optional.
+
+Raw data from our paper from:
+
+https://drive.google.com/drive/folders/0B5_QHWCtac81VGNKYnhrQkJBZGM
+
+I pre-loaded the data using swizzle.py into BigQuery for 10K and 100K
+samples and the full data set.  We will be able to run some queries to
+reproduce the results from our paper!  You could upload the data
+yourself, but that will not be necessary today.
+
+Google has agreed to pay for the BigQuery costs associated with this
+lab, you will need to send me your Google account information at:
+john.micco@gmail.com so that I can authorize your account to view and
+query the data.
+
+This repository contains the queries that we will be running 
+

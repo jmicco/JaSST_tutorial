@@ -10,7 +10,9 @@
 
 SELECT
   result,
-  count(*) AS count
+  COUNT(*) AS count,
+  FORMAT('%04.2f%%', COUNT(*) * 100.0 / (SELECT COUNT(*) FROM TestResultData.results WHERE result != 'AFFECTED_TARGET')) AS percentage
 FROM `TestResultData.results`
+WHERE result != 'AFFECTED_TARGET'
 GROUP BY result
 ORDER BY count DESC;

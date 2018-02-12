@@ -11,8 +11,6 @@
 # Orders the result by the amount of completely shared histories in the range.
 #
 
-#standardSQL
-
 WITH target_transition_set AS (
   SELECT
     target_id,

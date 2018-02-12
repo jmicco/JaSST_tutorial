@@ -10,7 +10,11 @@
 
 SELECT
   result,
-  count(*) AS count
+  COUNT(*) AS count,
+  FORMAT('%04.2f%%', COUNT(*) * 100.0 /
+    (SELECT COUNT(*) FROM TestResultData.results
+     WHERE result NOT IN  ('AFFECTED_TARGET', 'SKIPPED'))) AS percentage
 FROM `TestResultData.results`
+WHERE result not in ('AFFECTED_TARGET', 'SKIPPED')
 GROUP BY result
 ORDER BY count DESC;

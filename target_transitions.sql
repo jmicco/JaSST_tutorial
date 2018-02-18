@@ -19,7 +19,6 @@ WITH result_values AS (
     result
   FROM `TestResultData.results`
   WHERE result IN ('PASSED', 'FAILED', 'FLAKY', 'SKIPPED')
-  ORDER BY row
 ), transitions_by_cl as (
   SELECT
     A.changelist,

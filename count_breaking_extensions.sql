@@ -16,7 +16,7 @@ FROM `TestResultDataFull.changed_files`
 WHERE changelist IN (
   SELECT changelist
   FROM `TestResultDataFull.breaking_transitions`
-  group by changelist)
+  GROUP BY changelist)
 GROUP BY extension
 ORDER BY count DESC
 ;

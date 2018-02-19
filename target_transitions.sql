@@ -19,7 +19,7 @@ WITH result_values AS (
     result
   FROM `TestResultData.results`
   WHERE result IN ('PASSED', 'FAILED', 'FLAKY', 'SKIPPED')
-), transitions_by_cl as (
+), transitions_by_cl AS (
   SELECT
     A.changelist,
     A.target_id

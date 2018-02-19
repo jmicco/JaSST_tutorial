@@ -33,7 +33,7 @@ WITH result_values AS (
 )
 SELECT
   A.target_id,
-  count(*) AS transition_count
+  COUNT(*) AS transition_count
 FROM result_values AS A
   LEFT OUTER JOIN result_values AS B
   ON A.target_id = B.target_id AND A.row = B.row-1

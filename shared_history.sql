@@ -20,7 +20,7 @@ WITH target_transition_set AS (
   ORDER BY target_id
 )
 SELECT
-  count(*) AS shared_count,
+  COUNT(*) AS shared_count,
   ARRAY_TO_STRING(ARRAY_AGG(CAST(target_id AS STRING)), ',') AS targets,
   ARRAY_TO_STRING(changelists, ',') AS changelists
 FROM target_transition_set

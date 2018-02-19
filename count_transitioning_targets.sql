@@ -8,6 +8,7 @@
 # of distinct targets with transitions in the dataset.
 #
 
-SELECT COUNT(DISTINCT(target_id)) AS transitioning_targets
+SELECT
+  COUNT(DISTINCT(target_id)) AS transitioning_targets
 FROM `TestResultData100K.target_transitions`
 ;

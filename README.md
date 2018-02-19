@@ -33,28 +33,44 @@ head -100000 <datafile> > sample100k.csv
 
 All of the queries are in this github repository:
 
-*
-  [count_points.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_points.sql)
+* [breaking_transitions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/breaking_transitions.sql)
+  - Finds all of the transitions for non-flaky tests where they started
+  failing.  This data can be used to then find which file extensions or
+  users must frequently broke the build.
+
+* [count_breaking_authors.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_breaking_authors.sql)
+  - This query counts the number of times an author committed a change
+  that caused a test to fail in the dataset
+
+* [count_breaking_extensions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_breaking_extensions.sql)
+  - This query counts the number of times a file with the given
+  extension was committed in a confirmed breaking change
+
+* [count_extensions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_extensions.sql)
+  - This query counts the number of times a file with the given
+  extension was committed in a confirmed breaking change
+
+* [count_points.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_points.sql)
   - simply counts how many total P/F results are in the entire set
 
-*
-  [count_results.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_results.sql)
+* [count_results.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_results.sql)
   - Counts the number of each type of result in the set
 
-*
-  [count_transitions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_transitions.sql)
+* [count_transitioning_targets.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_transitioning_targets.sql)
+  - Simply uses the target_transitions table to count the number of
+  distinct targets with transitions in the dataset.
+
+* [count_transitions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_transitions.sql)
   - Counts the number of transitions for each target - high numbers of
   transitions / time period indicate tests that are flaky.  The
   results of this query are stored in the flaky_tests table.
 
-*
-  [shared_history.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_transitions.sql)
+* [shared_history.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/shared_history.sql)
   - Shows the tests that transitioned at the same time during the
   month.  Tests sharing the history across the month likely are not
   flaky.  Depends on the target_transitions table.
 
-*
-  [target_transitions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_transitions.sql)
+* [target_transitions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/target_transitions.sql)
   - Finds all of the places where a transition occurred for all
   targets.  The results of this query were saved as the
   target_transitions table.

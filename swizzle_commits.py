@@ -59,11 +59,11 @@ if len(args) != 1:
 #]
 
 with open(args[0]) as csvfile:
-  with open('commit_data.csv', 'w') as target_table:
-    with open('changed_files.csv', 'w') as result_table:
+  with open('commit_data.csv', 'w') as commit_table:
+    with open('changed_files.csv', 'w') as files_table:
       readCSV = csv.reader(csvfile, delimiter=',')
-      commitCSV = csv.writer(target_table, delimiter=',')
-      filesCSV = csv.writer(result_table, delimiter=',')
+      commitCSV = csv.writer(commit_table, delimiter=',')
+      filesCSV = csv.writer(files_table, delimiter=',')
       for row in readCSV:
         changelist = row.pop(0);
         author = row.pop(0);

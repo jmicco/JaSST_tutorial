@@ -15,6 +15,6 @@ SELECT
     (SELECT COUNT(*) FROM TestResultData.results
      WHERE result NOT IN  ('AFFECTED_TARGET', 'SKIPPED'))) AS percentage
 FROM `TestResultData.results`
-WHERE result not in ('AFFECTED_TARGET', 'SKIPPED')
+WHERE result NOT IN ('AFFECTED_TARGET', 'SKIPPED')
 GROUP BY result
 ORDER BY count DESC;

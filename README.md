@@ -46,6 +46,9 @@ All of the queries are in this github repository:
   - This query counts the number of times a file with the given
   extension was committed in a confirmed breaking change
 
+* [count_commits_per_day.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_commits_per_day.sql)
+  - Returns the number of commits / day
+
 * [count_extensions.sql](https://github.com/jmicco/JaSST_tutorial/blob/master/count_extensions.sql)
   - This query counts the number of times a file with the given
   extension was committed in a confirmed breaking change
